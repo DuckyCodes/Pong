@@ -31,7 +31,7 @@ void setup () {
   lives2 = 5; 
   
   vy = 3;
-  vx = 3;
+  vx = -3;
   
   rectX = 10;
   rectY = height/2;
@@ -41,7 +41,7 @@ void setup () {
   
   
   circleX = width/2;
-  circleY = width/2;
+  circleY = height/2;
   
 }
  

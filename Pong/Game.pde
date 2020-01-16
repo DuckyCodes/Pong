@@ -27,18 +27,54 @@ void game () {
   //circle boucing off rectangles
   
   if(circleX < rectX && circleX < rectY)
-  { vx = vx * -1;
+   vx = vx * -5;
+  
+  
+  
+  
+  if(circleX < rect2X && circleX < rect2Y) 
+  vx = vx * -5;
+  
+  
+  
+  
+  
+  
+  //rect limits
+  if(rect2Y > height ) rect2Y = 0;
+  if( rect2Y < 0) rect2Y = height;
+  if(rectY > height ) rectY = 0;
+  if(rectY < 0) rectY = height;
+  
+  
+  
+  //resetgame
+  if ( circleX > width + 50) {
+    
+  lives2 = lives2 - 1;
+  circleX = width/2;
+  circleY = width/2;
+  
+  }
+  if ( circleX > width + 50) {
+    
+  lives = lives - 1;
+  
+  circleX = width/2;
+  circleY = height/2;
+  
   }
   
   
   
-  if(circleX < rect2X && circleX < rect2Y) vx = vx * -1;
   
+  //winner
   
-  //rect limits
-  if(rect2Y > height || rect2Y < 0) rect2Y = 0;
-  if(rectY > height || rectY < 0) rectY = 0;
+  if (lives == 0);
+
   
+  if (lives2 == 0);
+ 
   
 }
 
